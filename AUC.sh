@@ -6,7 +6,7 @@ do
 		echo Removable media detected. Starting copying...
 		>nul cp -r /media/root/* /root/AutoUSBCopy
 		clear
-		if [ $(du -hs /media/root/* | cut -f1) == $(du -hs /root/AutoUSBCopy | cut -f1) ]
+		if [ $(du -hs /media/root/* | cut -f1) == $(du -hs /root/AutoUSBCopy | cut -f1) ]; then
 			echo -e "\033[1;32mThe copying process has been finished successfully."
 			exit
 		else
